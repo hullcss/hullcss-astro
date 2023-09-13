@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hullcss.org/sitemap-index.xml

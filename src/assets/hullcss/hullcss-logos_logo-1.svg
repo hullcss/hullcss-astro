@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer3">
+    <rect
+       style="fill:#282c34;fill-opacity:1;stroke-width:0.383964"
+       id="rect1"
+       width="50"
+       height="50"
+       x="0"
+       y="-3.2449276e-07" />
+    <g
+       id="layer2"
+       transform="matrix(1.2967046,0,0,1.1575242,-2.7770808,-0.60514607)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.0168px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#607857;fill-opacity:1;stroke-width:3.50141"
+         x="8.3829136"
+         y="37.671043"
+         id="text2-2-0"><tspan
+           id="tspan2-9-9"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#607857;fill-opacity:1;stroke-width:3.50141"
+           x="8.3829136"
+           y="37.671043">#</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.0168px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#98c379;fill-opacity:1;stroke-width:3.50129;stroke-dasharray:none"
+         x="9.2495804"
+         y="37.242447"
+         id="text2-6"><tspan
+           id="tspan2-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#98c379;fill-opacity:1;stroke-width:3.50129;stroke-dasharray:none"
+           x="9.2495804"
+           y="37.242447">#</tspan></text>
+    </g>
+  </g>
+</svg>

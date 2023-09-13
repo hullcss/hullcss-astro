@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50.000004mm"
+   viewBox="0 0 50 50.000004"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="g3"
+     transform="matrix(1.159794,0,0,1.150234,-0.94072344,-0.83051427)">
+    <rect
+       style="fill:#98c379;fill-opacity:1;stroke-width:0.332435"
+       id="rect1-7"
+       width="43.111103"
+       height="43.469418"
+       x="0.81111252"
+       y="0.7220394" />
+    <g
+       id="layer1"
+       transform="matrix(0.96400508,0,0,0.87489855,-48.87674,0.92254793)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.0168px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#607852;fill-opacity:1;stroke-width:3.50141"
+         x="8.3829136"
+         y="37.671043"
+         id="text2"
+         transform="matrix(1.159794,0,0,1.150234,49.059277,-0.83051425)"><tspan
+           id="tspan2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#607852;fill-opacity:1;stroke-width:3.50141"
+           x="8.3829136"
+           y="37.671043">#</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.0168px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#282c34;fill-opacity:1;stroke-width:3.50141"
+         x="9.2495804"
+         y="37.242447"
+         id="text3"
+         transform="matrix(1.159794,0,0,1.150234,49.059277,-0.83051425)"><tspan
+           id="tspan3"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#282c34;fill-opacity:1;stroke-width:3.50141"
+           x="9.2495804"
+           y="37.242447">#</tspan></text>
+    </g>
+  </g>
+</svg>

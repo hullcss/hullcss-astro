@@ -1,16 +1,23 @@
 ---
+import Boilerplate from "../layouts/Boilerplate.astro";
+import Landing from "../components/Landing.astro";
+import About from "../components/About.astro";
+import Execs from "../components/Execs.astro";
+import Links from "../components/Links.astro";
 
+const keywords = [
+	"hull", "computer", "science", "society", "hcss", 
+	"hcssoc", "hull", "university", "students", "student", 
+	"union", "hull", "css", "society", "computer", 
+]
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Boilerplate
+	title="Hull Computer Science Society"
+  	description="This is the Hull Computer Science Society website."
+	keywords={keywords}
+>
+	
+	
+</Boilerplate>
+

@@ -12,6 +12,7 @@ module.exports = {
 			mono_2: 'hsl(220, 9%, 55%)',
 			mono_3: 'hsl(220, 10%, 40%)',
 			mono_4: 'hsl(220, 13%, 18%)',
+			mono_5: 'hsl(220, 15%, 13%)',
 
 			// hue colors
 			hue_1a: 'hsl(187, 47%, 55%)',
@@ -24,8 +25,9 @@ module.exports = {
 			hue_6b: 'hsl( 39, 67%, 69%)',
 
 			// generic colors
-			foreground: 'hs(220, 14%, 71%)',
-			background: 'hsl(220, 13%, 18%)',
+			foreground: 'hsl(220, 14%, 71%)',
+			background_1: 'hsl(220, 13%, 18%)',
+			background_2: 'hsl(220, 15%, 13%)',
 			// gutter: 'hsl(220, 9%, 55%)',
 			gutter: 'hsl(220, 14%, 45%)',
 			accent: 'hsl(220, 100%, 66%)',

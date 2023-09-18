@@ -1,0 +1,17 @@
+---
+import Error from "../components/Error.astro";
+import Boilerplate from "../layouts/Boilerplate.astro";
+
+const keywords: string[] = []
+---
+
+<Boilerplate title="404" description="Page not found" keywords={keywords}>
+  <div class="error">
+    <h1>404</h1>
+    <p>Page not found</p>
+    <p>
+      Sorry, the page `<code>https://hullcss.org/{Astro.url}</code>` does not exist, 
+      Click <a href="/">here</a> to go back to the homepage.
+    </p>
+  </div>
+</Boilerplate>

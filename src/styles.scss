@@ -54,28 +54,28 @@ markdown {
     h1 {
         margin: 10px;
 
-        @apply text-4xl;
+        @apply text-3xl;
         @apply font-bold;
     }
 
     h2 {
         margin: 10px;
 
-        @apply text-3xl;
+        @apply text-2xl;
         @apply font-bold;
     }
 
     h3 {
         margin: 10px;
 
-        @apply text-2xl;
+        @apply text-xl;
         @apply font-bold;
     }
 
     h4 {
         margin: 10px;
 
-        @apply text-xl;
+        @apply text-lg;
         @apply font-bold;
     }
 
@@ -84,7 +84,6 @@ markdown {
         margin-top: 25px;
         margin-bottom: 25px;
 
-        @apply text-lg;
     }
 
     ul {
@@ -92,7 +91,6 @@ markdown {
         margin-top: 10px;
         margin-bottom: 10px;
 
-        @apply text-lg;
     }
 
     ol {
@@ -100,7 +98,6 @@ markdown {
         margin-top: 10px;
         margin-bottom: 10px;
 
-        @apply text-lg;
     }
 
     li {
@@ -111,7 +108,6 @@ markdown {
 
         list-style-type: disc;
 
-        @apply text-lg;
     }
 }
 

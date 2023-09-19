@@ -1,0 +1,10 @@
+---
+
+const { frontmatter } = Astro.props;
+
+
+// if draft, it will 404
+if (frontmatter.draft) {
+    return Astro.redirect('/404');
+}
+---

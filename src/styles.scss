@@ -1,3 +1,13 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+    @apply bg-mono_5;
+    @apply text-mono_1;
+
+    font-family: 'JetBrains Mono', monospace;
+}
 
 header {
 
@@ -7,8 +17,12 @@ main {
     a {
         text-decoration: none;
 
+        @apply text-hue_4a;
+
         &:hover {
             text-decoration: underline;
+
+            @apply text-hue_4b;
         }
     }
 
@@ -18,6 +32,18 @@ main {
 
     h1 {
         margin: 15px;
+    }
+
+    code {
+        padding-top: 1.5px;
+        padding-bottom: 1.5px;
+        padding-left: 3.5px;
+        padding-right: 3.5px;
+
+        border-radius: 5px;
+
+        @apply bg-mono_6;
+
     }
 }
 

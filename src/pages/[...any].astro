@@ -1,17 +1,20 @@
 ---
+// import Error from "../components/Error.astro"; //! TODO: sort this out
 import Error from "../components/Error.astro";
 import Boilerplate from "../layouts/Boilerplate.astro";
 
+// use styles.scss
+import "../styles.scss";
+
 const keywords: string[] = []
+
 ---
 
 <Boilerplate title="404" description="Page not found" keywords={keywords}>
-  <div class="error">
-    <h1>404</h1>
-    <p>Page not found</p>
-    <p>
-      Sorry, the page `<code>https://hullcss.org/{Astro.url}</code>` does not exist, 
-      Click <a href="/">here</a> to go back to the homepage.
+  <Error code="404">
+    <p class="text-xl p-250">
+      Sorry, the page `<code>{Astro.url}</code>` does not exist, 
+      Click <a href="/" class="text-hue_4a hover:text-hue_4b">here</a> to go back to the homepage.
     </p>
-  </div>
+  </Error>
 </Boilerplate>

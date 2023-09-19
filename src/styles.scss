@@ -1,0 +1,26 @@
+
+header {
+
+}
+
+main {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        margin: 15px;
+    }
+
+    h1 {
+        margin: 15px;
+    }
+}
+
+footer {
+
+}

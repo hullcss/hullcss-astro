@@ -1,0 +1,25 @@
+---
+// import Error from "../components/Error.astro"; //! TODO: sort this out
+import Boilerplate from "./Boilerplate.astro";
+import Error from "../components/Error.astro";
+
+// use styles.scss
+import "../styles.scss";
+
+const keywords: string[] = [];
+---
+
+<Boilerplate
+  title="502"
+  description="Page not yet avaliable"
+  keywords={keywords}
+>
+  <Error code="502">
+    <p class="text-xl p-250">
+      Sorry, the page `<code>{Astro.url}</code>` does not yet exist, but it is
+      soon to be added. Click <a href="/" class="text-hue_4a hover:text-hue_4b"
+        >here</a
+      > to go back to the homepage.
+    </p>
+  </Error>
+</Boilerplate>

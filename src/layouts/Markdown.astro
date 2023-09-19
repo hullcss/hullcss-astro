@@ -1,0 +1,21 @@
+---
+import Boilerplate from "./Boilerplate.astro";
+
+const { frontmatter } = Astro.props
+
+// remove all duplicate words in the description and add them as keywords   
+const tags: string[] = frontmatter.description.split(" ").filter((word: any, index: any, self: string | any[]) => {
+    return self.indexOf(word) === index;
+});
+
+import "../styles.scss"
+
+---
+
+<Boilerplate title={frontmatter.title} description={frontmatter.description} keywords={tags}>
+    <markdown class="flex items-center justify-center flex-col">
+    <div class="w-3/4">
+        <slot />
+    </div>
+    </markdown>
+</Boilerplate>

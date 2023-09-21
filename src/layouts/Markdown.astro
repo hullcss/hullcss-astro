@@ -8,8 +8,6 @@ const tags: string[] = frontmatter.description.split(" ").filter((word: any, ind
     return self.indexOf(word) === index;
 });
 
-import "../styles.scss"
-
 ---
 
 <Boilerplate title={frontmatter.title} description={frontmatter.description} keywords={tags}>

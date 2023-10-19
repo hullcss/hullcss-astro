@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
 :root {
     @apply bg-mono_5;
     @apply text-mono_1;
@@ -9,7 +10,63 @@
     font-family: 'JetBrains Mono', monospace;
 }
 
+* {
+    font-family: 'JetBrains Mono', monospace;
+}
+
 header {
+    // flex column with header-l on left and header-r on right
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    // set height
+    height: 75px;
+
+    // set colors
+    @apply bg-mono_4;
+    @apply text-mono_1;
+
+    .header-l {
+        height: 100%;
+
+        .header-image {
+            img {
+                height: 90%;
+                width: 90%;
+            }   
+        }
+    }
+
+    .header-r {
+        // flex links in col
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-left: 15px;
+        margin-right: 15px;
+
+        a {
+            font-size: larger;
+            padding-left: 25px;
+            text-decoration: none;
+
+            line-height: 25px;
+
+
+            &:hover {
+                text-decoration: underline;
+                transition: 0.125s ease-in-out;    
+                font-weight: bolder;
+
+                @apply text-hue_4a;
+            }
+        }
+    }
 
 }
 
@@ -22,7 +79,11 @@ main {
         &:hover {
             text-decoration: underline;
 
-            @apply text-hue_4b;
+            @apply text-hue_1a;
+        }
+
+        &:visited {
+            @apply text-hue_2a;
         }
     }
 
@@ -42,7 +103,7 @@ main {
 
         border-radius: 5px;
 
-        @apply bg-mono_6;
+        @apply bg-mono_5;
 
     }
 

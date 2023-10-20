@@ -14,5 +14,6 @@ export default defineConfig({
   output: "server",
   adapter: cloudflare(),
   redirects: {
+    "/links/testing": "https://hullcss.org/links",
   }
 });

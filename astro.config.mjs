@@ -14,6 +14,12 @@ export default defineConfig({
   output: "server",
   adapter: cloudflare(),
   redirects: {
-    "/links/testing": "https://hullcss.org/links",
+    "/links/discord": "https://discord.gg/sYeBPrjA",
+    "/links/facebook": "https://facebook.com/hullCSS",
+    "/links/github": "https://github.com/hullcss",
+    "/links/husu": "https://hulluniunion.com/activities/view/ComputerScience",
+    "/links/instagram": "https://instagram.com/hull_css/",
+    "/links/linkedin": "https://linkedin.com/company/hullcss",
+    "/links/twitter": "https://twitter.com/hull_CSS",
   }
 });

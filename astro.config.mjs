@@ -9,6 +9,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://hullcss.org",
   integrations: [tailwind(), mdx(), partytown(), sitemap(), prefetch()],
   output: "server",
   adapter: cloudflare(),

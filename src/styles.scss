@@ -24,6 +24,8 @@ header {
 
     // set height
     height: 75px;
+    padding-left: 5px;
+    padding-right: 5px;
 
     // set colors
     @apply bg-mono_4;
@@ -32,13 +34,38 @@ header {
     .header-l {
         height: 100%;
 
-        .header-image {
-            img {
-                height: 90%;
-                width: 90%;
-            }   
+        .header-image-1 {
+            display: block;
+        }
+
+        .header-image-2 {
+            display: none;
+        }
+
+        // if screen is less than 800px, hide image 1 and show image 2
+        @media only screen and (max-width: 800px) {
+            .header-image-1 {
+                display: none;
+            }
+
+            .header-image-2 {
+                display: block;
+            }
+        }
+
+        img {
+            height: 90%;
+            width: 90%;
+        }   
+    }
+
+    // if screen is less than 600px hide header-l
+    @media only screen and (max-width: 600px) {
+        .header-l {
+            display: none;
         }
     }
+
 
     .header-r {
         // flex links in col
@@ -64,6 +91,21 @@ header {
                 font-weight: bolder;
 
                 @apply text-hue_4a;
+            }
+        }
+    }
+
+    // if screen is less than 600px, center header-r and max width
+    @media only screen and (max-width: 600px) {
+        .header-r {
+            justify-content: center;
+            width: 100vw;
+            margin: 0px;
+
+            a {
+                font-size: large;
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
     }

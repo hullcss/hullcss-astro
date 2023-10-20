@@ -1,0 +1,26 @@
+---
+export interface Exec {
+    title: string;
+    name: string;
+    pronouns: string;
+    gh: string;
+    img: string;
+}
+
+const { title, name, pronouns, gh, img } = Astro.props;
+
+const img_url = `/assets/execs/${img}`;
+
+---
+
+
+
+<div class="exec">
+    <div class="exec-pfp">
+        <img src={img_url} alt={name}>
+    </div>
+    <div class="exec-info">
+        <h3><b>{title}: <a href={gh}>{name}</a> </b> <i> ({pronouns}) </i></h3>
+        <slot />
+    </div> 
+</div>

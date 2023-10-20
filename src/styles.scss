@@ -4,7 +4,7 @@
 
 
 :root {
-    @apply bg-mono_5;
+    @apply bg-mono_4;
     @apply text-mono_1;
 
     font-family: 'JetBrains Mono', monospace;
@@ -78,9 +78,7 @@ header {
         margin-right: 15px;
 
         a {
-            font-size: larger;
             padding-left: 25px;
-            text-decoration: none;
 
             line-height: 25px;
 
@@ -90,7 +88,20 @@ header {
                 transition: 0.125s ease-in-out;    
                 font-weight: bolder;
 
+                //increase font size
+                font-size: larger;
+
                 @apply text-hue_4a;
+            }
+
+            &:not(:hover) {
+                font-size: large;
+                text-decoration: none;
+                font-weight: normal;
+                
+                transition: 0.125s ease-in-out;    
+
+                @apply text-mono_1;
             }
         }
     }
@@ -113,19 +124,98 @@ header {
 }
 
 main {
+    // add 5% padding to l and r
+    padding-left: 10%;
+    padding-right: 10%;
+
+    .execs {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: xx-large;
+            font-weight: bold;
+            text-decoration: underline;
+            padding-bottom: 10px;
+        }
+
+        .exec {
+            display: flex;
+            flex-direction: row;
+
+            padding-bottom: 25px;
+
+            h3 {
+                margin: 0px;
+                margin-bottom: 10px;
+
+                font-size: larger;
+            }
+
+            i {
+                font-size: medium;
+            }
+
+
+            .exec-pfp {
+                // center image
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            img {
+
+                box-sizing: content-box;
+
+                height: 175px;
+                width: 175px;
+                margin-right: 25px;
+                // round corners
+                border-radius: 20px;
+
+                @apply bg-mono_5;
+
+                &:hover {
+                    transition: 0.2s ease-in-out;
+                    transform: scale(1.05);
+                    border-radius: 10px;
+                }
+
+                // on not hover, transition back to normal
+                &:not(:hover) {
+                    transition: 0.1s ease-in-out;
+                    transform: scale(1);
+                    border-radius: 20px;
+                }
+            }
+
+            // if less than 800, hide exec-pfp
+            @media only screen and (max-width: 800px) {
+                .exec-pfp {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
     a {
-        text-decoration: none;
-
-        @apply text-hue_4a;
-
         &:hover {
             text-decoration: underline;
 
-            @apply text-hue_1a;
+            transition: 0.125s ease-in-out;
+
+            @apply text-hue_4b;
         }
 
-        &:visited {
-            @apply text-hue_2a;
+        &:not(:hover) {
+            text-decoration: none;
+
+            transition: 0.125s ease-in-out;
+
+            @apply text-hue_4a;
         }
     }
 

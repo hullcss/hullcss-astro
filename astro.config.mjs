@@ -14,6 +14,7 @@ export default defineConfig({
   output: "server",
   adapter: cloudflare(),
   redirects: {
+    "/links": "https://linktr.ee/hullcss",
     "/links/discord": "https://discord.gg/AFxbUs5kyA",
     "/links/facebook": "https://facebook.com/hullCSS",
     "/links/github": "https://github.com/hullcss",

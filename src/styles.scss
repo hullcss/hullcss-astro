@@ -158,22 +158,23 @@ main {
 
 
             .exec-pfp {
-                // center image
-                display: flex;
+                // center image;
                 justify-content: center;
                 align-items: center;
-
             }
 
             img {
 
-                box-sizing: content-box;
+                box-sizing: border-box;
 
-                height: 175px;
-                width: 175px;
                 margin-right: 25px;
-                // round corners
                 border-radius: 20px;
+
+                min-height: 175px;
+                min-width: 175px;
+
+                max-width: 175px;
+                max-height: 175px;
 
                 @apply bg-mono_5;
 

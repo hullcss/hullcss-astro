@@ -1,0 +1,53 @@
+---
+
+const start_year = 2023;
+const current_year = new Date().getFullYear();
+const year = (start_year == current_year) ? start_year : `${start_year} - ${current_year}`;
+
+
+---
+
+<footer>
+    <div class="footer-l">
+        <div class="copyright">
+            <p>
+                &copy; HullCSS { year } <span><i>(<a href="https://hullcss.org">https://hullcss.org</a>)</i></span>
+            </p>
+        </div>
+        <div class="info">
+            <p>
+                built <a href="https://astro.dev">&#35;withastro</a> and &lt;3
+                by <a href="https://github.com/ash-entwisle">Ash Entwisle</a>
+            </p>
+        </div>
+        <div class="disclaimer">
+            <p>
+                HullCSS is a society under the Hull University Students Union. 
+                All views represented are of our own and not that of the University, nor the Students Union. 
+            </p>
+        </div>
+    </div>
+    <div class="footer-r">
+        <div class="socials">
+            <h5>Find us Online:</h5>
+            <ul>
+                <li><a href="/links/facebook">Facebook</a></li>
+                <li><a href="/links/twitter">Twitter</a></li>
+                <li><a href="/links/instagram">Instagram</a></li>
+                <li><a href="/links/github">GitHub</a></li>
+                <li><a href="/links/discord">Discord</a></li>
+            </ul>
+        </div>
+        <div class="important">
+            <h5>Important Links:</h5>
+            <ul>
+                <li><a href="/links/constitution">Constitution</a></li>
+                <li><a href="/links/privacy">Privacy Policy</a></li>
+                <li><a href="/links/terms">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="sitemap">
+            <h5>Sitemap:</h5>
+        </div>
+    </div>
+</footer>

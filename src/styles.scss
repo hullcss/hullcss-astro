@@ -28,7 +28,7 @@ header {
     padding-right: 5px;
 
     // set colors
-    @apply bg-mono_4;
+    @apply bg-mono_5;
     @apply text-mono_1;
 
     .header-l {
@@ -56,6 +56,16 @@ header {
         img {
             height: 90%;
             width: 90%;
+
+            &:hover {
+                transition: 0.125s ease-in-out;
+                transform: scale(1.05);
+            }
+
+            &:not(:hover) {
+                transition: 0.125s ease-in-out;
+                transform: scale(1);
+            }
         }   
     }
 
@@ -124,33 +134,88 @@ header {
 }
 
 main {
-    // add 5% padding to l and r
+    // add 10% padding to l and r
     padding-left: 10%;
     padding-right: 10%;
+
+    max-width: 1500px;
+
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
+
+    // if screen is greater than 1500, set max width to 1750
+    @media only screen and (min-width: 1500px) {
+        max-width: 1750px;
+    }
+
+    // if screen is greater than 1750, set max width to 2000
+    @media only screen and (min-width: 1750px) {
+        max-width: 2000px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row;
+
+        .about-l {
+            width: 55%;
+
+            p {
+                max-width: 750px;
+            }
+        }
+
+        .about-r {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 45%;
+
+            .about-image {
+                // center image;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                height: 100%;
+
+                img {
+
+                    width: 90%;
+                    min-width: 300px;
+                }
+            
+            }
+        }
+
+        // if less than 1000, flex about in col
+        @media only screen and (max-width: 1000px) {
+            flex-direction: column;
+
+            .about-l {
+                width: 100%;
+            }
+
+            .about-r {
+                width: 100%;
+            }
+        }
+    }
 
     .execs {
         display: flex;
         flex-direction: column;
-
-        h2 {
-            font-size: xx-large;
-            font-weight: bold;
-            text-decoration: underline;
-            padding-bottom: 10px;
-        }
 
         .exec {
             display: flex;
             flex-direction: row;
 
             padding-bottom: 25px;
-
-            h3 {
-                margin: 0px;
-                margin-bottom: 10px;
-
-                font-size: larger;
-            }
 
             i {
                 font-size: medium;
@@ -175,21 +240,6 @@ main {
 
                 max-width: 175px;
                 max-height: 175px;
-
-                @apply bg-mono_5;
-
-                &:hover {
-                    transition: 0.2s ease-in-out;
-                    transform: scale(1.05);
-                    border-radius: 10px;
-                }
-
-                // on not hover, transition back to normal
-                &:not(:hover) {
-                    transition: 0.1s ease-in-out;
-                    transform: scale(1);
-                    border-radius: 20px;
-                }
             }
 
             // if less than 800, hide exec-pfp
@@ -201,6 +251,151 @@ main {
         }
 
     }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+
+        .contact-l {
+            width: 60%;
+
+            p {
+                max-width: 750px;
+            }
+        }
+
+        .contact-r {
+            // flex buttons in col
+            // center all buttons
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            width: 40%;
+            margin-top: 50px;
+
+            #instagram {
+                &:hover {
+                    @apply border-hue_5a;
+                }
+            }
+
+            #discord {
+                &:hover {
+                    @apply border-hue_2a;
+                }
+            }
+
+            #email {
+                &:hover {
+                    @apply border-hue_4a;
+                }
+            }
+
+            #github {
+                &:hover {
+                    @apply border-hue_3a;
+                }
+            }
+
+            .social-button {
+                width: 300px;
+
+                border: 2.5px solid;
+                
+                // add padding
+                padding: 10px;
+
+                // add margin
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                // set bg color
+                @apply bg-mono_5;
+
+                .social-button-span {
+                    width: 45%;
+
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+            
+                a {
+                    // flex row, center all items in row add space between
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+                    gap: 15px;
+                    margin-left: 25%;
+                    @apply text-mono_1;
+                }
+
+                img {
+
+                    // set width and height
+                    width: 25px;
+                    height: 25px;
+
+                    // set svg color
+
+
+                    &:hover {
+                        transform: scale(1);
+                        border-radius: 0px;
+                    }
+                    &:not(:hover) {
+                        transform: scale(1);
+                        border-radius: 0px;
+                    }
+                }
+
+                &:hover {
+                    transition: 0.2s ease-in-out;
+                    transform: scale(1.05);
+                    border-radius: 10px;
+                }
+        
+                // on not hover, transition back to normal
+                &:not(:hover) {
+                    transition: 0.1s ease-in-out;
+                    transform: scale(1);
+                    border-radius: 15px;
+
+                    @apply border-mono_5;
+                }
+            }
+        }
+
+        // if less than 800, flex contact in col
+        @media only screen and (max-width: 1000px) {
+            flex-direction: column;
+
+            .contact-l {
+                width: 100%;
+            }
+
+            .contact-r {
+                width: 100%;
+            }
+        }
+
+        // if screen greater than 1500, increase width of contact-r
+        @media only screen and (min-width: 1500px) {
+            .contact-l {
+                width: 50%;
+            }
+            .contact-r {
+                width: 50%;
+            }
+        }
+    }
+    
 
     a {
         &:hover {
@@ -221,11 +416,40 @@ main {
     }
 
     p {
-        margin: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     h1 {
-        margin: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: xx-large;
+        font-weight: bold;
+        text-decoration: underline;
+
+        padding-bottom: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: x-large;
+        font-weight: bold;
+        text-decoration: underline;
+
+        padding-bottom: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    h4 {
+        margin: 0px;
+        margin-bottom: 10px;
+
+        font-size: larger;
     }
 
     code {
@@ -238,6 +462,21 @@ main {
 
         @apply bg-mono_5;
 
+    }
+
+    img {
+        &:hover {
+            transition: 0.2s ease-in-out;
+            transform: scale(1.05);
+            border-radius: 10px;
+        }
+
+        // on not hover, transition back to normal
+        &:not(:hover) {
+            transition: 0.1s ease-in-out;
+            transform: scale(1);
+            border-radius: 20px;
+        }
     }
 
 }

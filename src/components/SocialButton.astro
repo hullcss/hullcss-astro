@@ -11,14 +11,14 @@ const props = Astro.props
 
 ---
 
-<div class="social-button" id={props.text}>
-    <a href={props.href}>
+<a href={props.href}>
+    <div class="social-button" id={props.text}>
         <div class="social-button-icon">
             <img src={props.icon} alt={props.text}/>
         </div>
         <div class="social-button-span">
             <span>{props.text}</span>
         </div>
-    </a>
-</div>
+    </div>
+</a>
 

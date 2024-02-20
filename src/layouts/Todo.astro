@@ -1,20 +1,8 @@
 ---
-// import Error from "../components/Error.astro"; //! TODO: sort this out
-import Boilerplate from "./Boilerplate.astro";
-import Error from "../components/Error.astro";
-
-const keywords: string[] = [];
+import Error from "./Error.astro";
 ---
 
-<Boilerplate
-  title="502"
-  description="Page not yet avaliable"
-  keywords={keywords}
->
-  <Error code="502">
-    <p class="text-xl p-250">
-      Sorry, the page `<code>{Astro.url}</code>` does not yet exist, but it issoon to be added. 
-      Click <a href="/">here</a> to go back to the homepage.
-    </p>
-  </Error>
-</Boilerplate>
+<Error code="501" title="Page not Implemented">
+  Sorry, the page `<code>{Astro.url}</code>` is currently under construction.
+  Click <a href="/">here</a> to go back to the homepage.
+</Error>

@@ -1,4 +1,4 @@
-import { IIcon } from './icon';
+import type { IIcon } from './icon';
 
 /**
  * Represents a lazy link.

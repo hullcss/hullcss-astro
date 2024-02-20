@@ -1,4 +1,5 @@
 ---
+import Center from "../components/base/Center.astro";
 import Boilerplate from "./Boilerplate.astro";
 
 const { frontmatter } = Astro.props
@@ -10,10 +11,16 @@ const tags: string[] = frontmatter.description.split(" ").filter((word: any, ind
 
 ---
 
-<Boilerplate title={frontmatter.title} description={frontmatter.description} keywords={tags}>
-    <markdown class="flex items-center justify-center flex-col">
-    <div class="w-3/4">
-        <slot />
-    </div>
-    </markdown>
+<Boilerplate 
+    title={frontmatter.title} 
+    description={frontmatter.description} 
+    keywords={tags}
+    header={true}
+    footer={true}
+>
+    <Center id="main_md">
+        <markdown>
+            <slot />
+        </markdown>
+    </Center>
 </Boilerplate>

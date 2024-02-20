@@ -1,4 +1,5 @@
 ---
+import Markdown from "./Markdown.astro";
 
 const { frontmatter } = Astro.props;
 
@@ -8,4 +9,8 @@ if (frontmatter.draft) {
     return Astro.redirect('/404');
 }
 ---
+
+<Markdown frontmatter={frontmatter}>
+<slot />
+</Markdown>
 

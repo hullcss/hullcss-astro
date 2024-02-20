@@ -1,52 +1,67 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from "../components/compound/Header.astro";
+import Footer from "../components/compound/Footer.astro";
+
+import "../styles/main.scss";
+//import "../styles.scss";
 
 export interface Props {
-    title: string;
-    description: string;
-    keywords: string[];
+  title: string;
+  description: string;
+  keywords: string[];
+  header: boolean;
+  footer: boolean;
 }
 
-const { title, description, keywords } = Astro.props;
+const props = Astro.props;
 
-const keywordsString = keywords.join(' ');
-
-import "../styles.scss"
+const keywordsString = props.keywords.join(" ");
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Ash Entwisle">
-        <meta name="description" content={ description }>
-        <meta name="keywords" content={ keywordsString }>
-        <meta name="robots" content="index, follow">
-        <meta name="theme-color" content="#282c34"/>
-        <meta name="generator" content={Astro.generator} />
-        <link rel="manifest" href="manifest.json">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/favicon.ico">
-        <link rel="sitemap" href="/sitemap-index.xml">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
-        <title>{title}</title>
-        </head>
-    <body>
-	    <Header />
-        <main>
-        <slot />
-        </main>
-        <Footer />
-        <script>
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js');
-                });
-            }
-        </script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ash Entwisle" />
+    <meta name="description" content={props.description} />
+    <meta name="keywords" content={keywordsString} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#282c34" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="/" crossorigin />
+    <link href="https://proot.zip/styles/urbanist.css" rel="stylesheet" />
+    <link href="https://proot.zip/styles/fa-icons.css" rel="stylesheet" />
+    <title>{props.title}</title>
+  </head>
+  <body>
+    {
+      props.header ? 
+        <Header 
+          // icon="https://proot.zip/assets/hallshero/logo.svg" 
+          icon="/logo.svg"
+          title="" 
+        /> 
+        : ""
+    }
+    <main>
+      <slot />
+    </main>
+    {
+      props.footer ? 
+        <Footer /> 
+        : ""
+    }
+    <script>
+       if ("serviceWorker" in navigator) {
+         window.addEventListener("load", () => {
+           navigator.serviceWorker.register("/sw.js");
+        });
+      }
+    </script>
+  </body>
 </html>

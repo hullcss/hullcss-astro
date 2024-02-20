@@ -1,0 +1,16 @@
+---
+import YearRange from '../base/YearRange.astro';
+
+export interface Props {
+  name: string;
+  year: number;
+  href: string;
+}
+
+const props = Astro.props;
+---
+
+<div class="copywright">
+  <span><a href={props.href}>{props.name}</a> &copy;</span>
+  <YearRange from={props.year} />
+</div>

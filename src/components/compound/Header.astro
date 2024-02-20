@@ -1,0 +1,30 @@
+---
+import LinkButton from '../base/LinkButton.astro';
+import ImageContainer from '../base/ImageContainer.astro';
+
+export interface Props {
+  icon: string;
+  title: string;
+}
+
+const props = Astro.props;
+
+---
+
+<header>
+
+<div class="left">
+  <a href="/">
+    <ImageContainer src="/favicon.svg" alt={props.title} id="favicon" />
+    <ImageContainer src={props.icon} alt={props.title} id="full"/>
+  </a>
+</div>
+
+<div class="right">
+  <LinkButton title="about" href="/#about" />
+  <LinkButton title="blog" href="/blog" />
+  <LinkButton title="contact" href="/#contact" />
+  <LinkButton title="discord" href="/discord" />
+</div>
+
+</header>

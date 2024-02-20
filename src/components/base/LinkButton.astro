@@ -1,0 +1,18 @@
+---
+import type { IIcon } from '../../types/icon';
+import Icon from './Icon.astro';
+
+export interface Props {
+  icon?:  IIcon;
+  title:  string;
+  href:   string;
+}
+
+const props = Astro.props;
+
+---
+
+<a href={props.href} class="link_button">
+  {props.icon && <Icon icon={props.icon} />}
+  {props.title}
+</a>

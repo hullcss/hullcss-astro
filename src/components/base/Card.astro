@@ -1,0 +1,15 @@
+---
+import type { ILink } from "../../types/link";
+import Icon from "./Icon.astro";
+
+export interface Props {
+  link: ILink;
+}
+
+const { link } = Astro.props;
+---
+
+<a href={link.href} class="link">
+  {link.icon ? <Icon icon={link.icon} /> : ""}
+  <span>{link.name}</span>
+</a>

@@ -1,0 +1,12 @@
+---
+import type { IIcon } from "../../types/icon";
+
+export interface Props {
+  icon: IIcon;
+}
+
+const { icon } = Astro.props;
+const weight = icon.bold ? "900" : "400";
+---
+
+<i style={`font-weight: ${weight}`}>&#x{icon.code};</i>

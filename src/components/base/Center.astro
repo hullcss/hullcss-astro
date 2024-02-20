@@ -1,0 +1,16 @@
+---
+export interface Props {
+  id: string;
+}
+
+const props = Astro.props;
+
+
+
+---
+
+<div class="centerbox" id={props.id}>
+  <div class="centerbox_content" id={props.id}>
+    <slot/>
+  </div>
+</div>

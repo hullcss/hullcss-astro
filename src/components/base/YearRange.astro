@@ -1,0 +1,18 @@
+---
+export interface Props {
+  from:   number;
+  to?:    number;
+}
+
+let props = Astro.props;
+
+// if to is undefined, set to current year
+if (props.to === undefined) {
+  props.to = new Date().getFullYear();
+}
+
+const yearrange = (props.from === props.to) ? props.from : `${props.from} - ${props.to}`;
+
+---
+
+<span class="year_range">{yearrange}</span>

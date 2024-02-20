@@ -1,0 +1,19 @@
+---
+import Center from "../base/Center.astro";
+export interface Props {
+  email: string;
+
+}
+
+const props = Astro.props;
+
+// on submit open mailto link
+---
+
+<div class="email_form">
+
+  
+  <form action={`mailto:${props.email}`} method="post" enctype="text/plain">
+    <input type="text" name="" id="">
+  </form>
+</div>

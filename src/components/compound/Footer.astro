@@ -1,0 +1,80 @@
+---
+import LinkList from "../base/LinkList.astro"
+import Copywright from "./Copywright.astro"
+
+---
+
+<footer>
+
+
+
+
+<LinkList
+  title="Quick Links"
+  links={[
+    { 
+      name: "Home", 
+      href: "/" 
+    }, { 
+      name: "About", 
+      href: "/about" 
+    }, { 
+      name: "Contact", 
+      href: "/contact" 
+    }, { 
+      name: "Blog", 
+      href: "/blog" 
+    },
+  ]}
+/>
+
+<LinkList
+  title="Important"
+  links={[
+    { 
+      name: "Hull University", 
+      href: "https://www.hull.ac.uk" 
+    }, { 
+      name: "Hull University Union", 
+      href: "https://hulluniunion.com" 
+    }, { 
+      name: "Terms of Service", 
+      href: "/legal" 
+    },
+  ]}
+/>  
+
+<LinkList
+  title="Social"
+  links={[
+    { 
+      name: "Facebook", 
+      href: "/" 
+    }, { 
+      name: "Twitter", 
+      href: "/" 
+    }, { 
+      name: "Instagram", 
+      href: "/" 
+    },
+  ]}
+/>
+
+<div class="info">
+
+  <div class="misc">
+    <h2>#HullCSS</h2>
+    <p>
+      Built #withastro and &lt;3 by Ash Entwisle for HullCSS
+    </p>
+  </div>
+    
+  <Copywright
+    name="HullCSS"
+    year={2018}
+    href="https://hullcss.org"
+  />
+
+</div>
+
+</footer>

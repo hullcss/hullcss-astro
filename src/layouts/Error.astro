@@ -1,0 +1,28 @@
+---
+import Center from "../components/base/Center.astro";
+
+import Boilerplate from "./Boilerplate.astro";
+
+export interface Props {
+  code: string;
+  title: string;
+}
+
+const kw: string[] = [];
+
+const props = Astro.props;
+const title = `Error: ${props.code} (${props.title})`;
+---
+
+<Boilerplate
+  title={props.code}
+  description={props.title}
+  keywords={kw}
+  header={true}
+  footer={true}
+>
+  <Center id="error_main">
+    <h1>{title}</h1>
+    <p><slot /></p>
+  </Center>
+</Boilerplate>

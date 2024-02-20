@@ -1,0 +1,46 @@
+// Tailwind Base
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// @import '../static/fonts.css';
+@import 'colours.scss';
+@import 'sizes.scss';
+
+// base styles
+@import 'base.scss';
+
+// Component Styles
+@import 'components/header.scss';
+@import 'components/footer.scss';
+@import 'components/centerbox.scss';
+@import 'components/markdown.scss';
+
+// Page Styles
+@import 'pages/index.scss';
+@import 'pages/404.scss';
+
+// import fonts from ash's CDN
+@import url('https://proot.zip/styles/jb-mono.css');
+@import url('https://proot.zip/styles/fa-icons.css');
+
+
+// Default Styles
+:root {
+  // Set font to urbanist, fall back to system fonts, include Font Awesome
+  font-family: 'JetBrains Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+
+  font-size: 0.9em;
+  font-weight: 400;
+
+
+  // Foreground Colours
+  color: $col-fg-default;
+
+  // Background Colours
+  background-color: $col-bg-muted;
+
+  // Border Colours 
+  border-color: $col-border-default;
+
+}

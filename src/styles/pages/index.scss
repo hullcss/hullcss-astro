@@ -1,0 +1,137 @@
+main {
+  #landing_main {
+      // add 5% padding to l and r
+    padding-left: 10%;
+    padding-right: 10%;
+
+    h2 {
+        text-decoration: underline;
+        padding-bottom: 10px;
+
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .about {
+      padding-top: 200px;
+      padding-bottom: 200px;
+
+      padding-left: 5%;
+      padding-right: 5%;
+
+      h1 span {
+        text-decoration: underline;
+
+        font-size: 1.75em;
+        font-weight: 600;
+
+      }
+
+      p {
+        font-size: 1.1em;
+        font-weight: 300;
+        
+        padding-top: 10px;
+      }
+
+      @media only screen and (max-width: 1000px) {
+        padding-top: 0px;
+        padding-bottom: 25px;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      // if less than 550, set h1 to 1.5em
+      @media only screen and (max-width: 550px) {
+        h1 span {
+          font-size: 1.3em;
+        }
+      }
+    }
+    .execs {
+        display: flex;
+        flex-direction: column;
+
+
+        .exec {
+            display: flex;
+            flex-direction: row;
+
+            padding-bottom: 25px;
+
+            h3 {
+              margin: 0px;
+              margin-bottom: 10px;
+
+              i {
+                font-weight: 300;
+                font-size: 0.9em;
+              }
+            }
+
+            p {
+              margin: 0px;
+            }
+
+
+            .exec-pfp {
+                // center image;
+                justify-content: center;
+                align-items: center;
+            }
+
+            img {
+
+                box-sizing: border-box;
+
+                margin-right: 25px;
+                border-radius: 20px;
+
+                min-height: 175px;
+                min-width: 175px;
+
+                max-width: 175px;
+                max-height: 175px;
+
+                background-color: $col-bg-muted;
+
+                &:hover {
+                    transition: 0.2s ease-in-out;
+                    transform: scale(1.05);
+                    border-radius: 10px;
+                }
+
+                // on not hover, transition back to normal
+                &:not(:hover) {
+                    transition: 0.1s ease-in-out;
+                    transform: scale(1);
+                    border-radius: 20px;
+                }
+            }
+
+            // if less than 800, hide exec-pfp
+            @media only screen and (max-width: 800px) {
+                .exec-pfp {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    a {
+      font-weight: 300;
+    }
+
+    code {
+        padding-top: 1.5px;
+        padding-bottom: 1.5px;
+        padding-left: 3.5px;
+        padding-right: 3.5px;
+
+        border-radius: 5px;
+
+        background-color: $col-bg-muted;
+
+    }
+  }
+}

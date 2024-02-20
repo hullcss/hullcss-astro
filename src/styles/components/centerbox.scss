@@ -1,0 +1,24 @@
+.centerbox {
+  // center centerbox_content in the middle of the screen
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+  height: 100%;
+  width: 100%;
+}
+
+.centerbox_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  // center centerbox_content in the middle of the screen
+  height: 100%;
+  width: 100%;
+
+}

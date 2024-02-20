@@ -1,0 +1,105 @@
+@import '../colours.scss';
+
+header {
+  height: 60px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  color: $col-mono-1;
+  background-color: $col-bg-muted;
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .image {
+
+    img {
+      height: 50px;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .link {
+      margin: 0 10px;
+    }
+
+    #favicon {
+      display: none;
+    }
+
+    // if less than 550px width, hide the h1
+    @media (max-width: 550px) {
+      #favicon {
+        display: block;
+      }
+
+      #full {
+        display: none;
+      
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-right: 10px;
+
+    .link {
+      margin: 0 15px;
+    }
+
+    .link_button {
+      padding: 7.5px;
+      border-radius: 5px;
+
+      color: $col-mono-1;
+
+      font-size: 1em;
+      font-weight: 500;
+
+      text-decoration: none;
+
+      // center text
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 1.5px;
+
+        transition: text-decoration 0.1s;
+      }
+    }
+  }
+
+  // if less than 400, hide left and center the right
+  @media (max-width: 400px) {
+
+    justify-content: center;
+    align-items: center;
+
+    .left {
+      display: none;
+    }
+
+    .right {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}

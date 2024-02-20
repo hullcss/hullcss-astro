@@ -1,0 +1,43 @@
+main {
+  #error_main {
+    height: 400px;
+
+    .centerbox_content {
+      width: 40%;
+      min-width: 450px;
+    }
+
+    h1 {
+      font-size: 2em;
+      font-weight: 600;
+
+      width: 100%;
+      max-width: 600px;
+    }
+
+    p {
+      font-size: 1.15em;
+      font-weight: 400;
+    }
+
+    // if less than 500 px, set centerbox_content width to 100% and remove min-width
+    @media (max-width: 500px) {
+      height: 250px;
+
+      .centerbox_content {
+        width: 85%;
+        min-width: 0;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+    }
+  }
+}

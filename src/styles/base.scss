@@ -1,0 +1,82 @@
+@import 'colours.scss';
+
+main {
+  width: $size-main-w;
+  min-height: 70vh;
+
+  background-color: $col-bg-default;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+h1 {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.0em;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+a {
+  // font-size: 0.9em;
+  // font-weight: 300;
+
+  color: $col-fg-accent;
+
+  transition: color 0.1s;
+
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  
+  transition: text-decoration-style 0.1s;
+
+  // on hover, make line straight in 0.1s 
+  &:hover {
+    text-decoration-style: solid;
+    transition: text-decoration-style 0.1s;
+
+    color: $col-light-5;
+    transition: color 0.1s;
+  }
+
+  // on click, remove the underline and change to white
+  &:active {
+    text-decoration: none;
+    color: $col-mono-1;
+  }
+}
+
+span {
+  font-size: 0.9em;
+  font-weight: 300;
+}

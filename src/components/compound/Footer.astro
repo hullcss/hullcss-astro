@@ -17,7 +17,7 @@ import Copywright from "./Copywright.astro"
       href: "/" 
     }, { 
       name: "About", 
-      href: "/about" 
+      href: "/#about" 
     }, { 
       name: "Contact", 
       href: "/contact" 
@@ -30,8 +30,10 @@ import Copywright from "./Copywright.astro"
 
 <LinkList
   title="Important"
-  links={[
-    { 
+  links={[{
+      name: "Link Tree",
+      href: "links"
+    }, { 
       name: "Hull University", 
       href: "https://www.hull.ac.uk" 
     }, { 
@@ -48,14 +50,17 @@ import Copywright from "./Copywright.astro"
   title="Social"
   links={[
     { 
-      name: "Facebook", 
-      href: "/" 
-    }, { 
-      name: "Twitter", 
-      href: "/" 
-    }, { 
-      name: "Instagram", 
-      href: "/" 
+      name: "Discord",
+      href: "links/discord"
+    }, {
+      name: "GitHub",
+      href: "links/github"
+    }, {
+      name: "Instagram",
+      href: "links/instagram"
+    }, {
+      name: "HUSU",
+      href: "links/husu"
     },
   ]}
 />

@@ -9,34 +9,34 @@ $col-mono-7:          hsl(220,   13%,  18%);
 $col-mono-8:          hsl(222,   15%,  13%);
 
 // Lighter Colours
-$col-light-1:         hsl(  0,  41%,  64%);
-$col-light-2:         hsl( 33,  34%,  63%);
-$col-light-3:         hsl( 52,  38%,  67%);
-$col-light-4:         hsl(120,  20%,  66%);
-$col-light-5:         hsl(204,  49%,  68%);
-$col-light-6:         hsl(222,  67%,  70%);
-$col-light-7:         hsl(238,  43%,  66%);
-$col-light-8:         hsl(270,  42%,  64%);
+$col-light-1:         hsl(0, 80%, 80%);
+$col-light-2:         hsl(13, 77%, 76%);
+$col-light-3:         hsl(34, 65%, 73%);
+$col-light-4:         hsl(96, 21%, 72%);
+$col-light-5:         hsl(187, 41%, 65%);
+$col-light-6:         hsl(207, 50%, 68%);
+$col-light-7:         hsl(233, 45%, 71%);
+$col-light-8:         hsl(286, 48%, 72%);
 
 // Normal Colours
-$col-normal-1:        hsl(  0,  40%,  43%);
-$col-normal-2:        hsl( 33,  38%,  46%);
-$col-normal-3:        hsl( 52,  50%,  47%);
-$col-normal-4:        hsl(120,  36%,  46%);
-$col-normal-5:        hsl(204, 100%,  45%);
-$col-normal-6:        hsl(221,  34%,  39%);
-$col-normal-7:        hsl(231,  44%,  34%);
-$col-normal-8:        hsl(270,  41%,  34%);
+$col-normal-1:        hsl(0, 79%, 64%);
+$col-normal-2:        hsl(13, 69%, 64%);
+$col-normal-3:        hsl(34, 72%, 64%);
+$col-normal-4:        hsl(96, 40%, 65%);
+$col-normal-5:        hsl(187, 50%, 47%);
+$col-normal-6:        hsl(187, 50%, 47%);
+$col-normal-7:        hsl(233, 60%, 67%);
+$col-normal-8:        hsl(286, 57%, 65%);
 
 // Darker Colours
-$col-dark-1:          hsl(  0,  53%,  30%);
-$col-dark-2:          hsl( 33,  56%,  30%);
-$col-dark-3:          hsl( 52,  37%,  33%);
-$col-dark-4:          hsl(120,  37%,  35%);
-$col-dark-5:          hsl(204,  60%,  32%);
-$col-dark-6:          hsl(222,  49%,  31%);
-$col-dark-7:          hsl(230,  36%,  24%);
-$col-dark-8:          hsl(270,  36%,  26%);
+$col-dark-1:          hsl(0, 87%, 59%);
+$col-dark-2:          hsl(13, 83%, 58%);
+$col-dark-3:          hsl(34, 82%, 59%);
+$col-dark-4:          hsl(96, 38%, 49%);
+$col-dark-5:          hsl(187, 63%, 38%);
+$col-dark-6:          hsl(207, 87%, 48%);
+$col-dark-7:          hsl(233, 74%, 59%);
+$col-dark-8:          hsl(286, 67%, 58%);
 
 // pre-defined colours for UI, DARK MODE
 
@@ -46,7 +46,7 @@ $col-fg-muted:          $col-mono-2;
 $col-fg-subtle:         $col-mono-2;
 $col-fg-onemph:         $col-mono-1;
 
-$col-fg-accent:         $col-light-4;
+$col-fg-accent:         $col-normal-4;
 $col-fg-success:        $col-normal-4;
 $col-fg-attention:      $col-normal-2;
 $col-fg-danger:         $col-normal-1;

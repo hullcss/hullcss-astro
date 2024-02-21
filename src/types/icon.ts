@@ -1,5 +1,5 @@
 /**
- * Represents an icon used in LazyLink.
+ * Represents an icon
  */
 export interface IIcon {
     /**

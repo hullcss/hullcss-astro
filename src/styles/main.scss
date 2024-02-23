@@ -21,8 +21,8 @@
 @import 'pages/404.scss';
 
 // import fonts from ash's CDN
-@import url('https://proot.zip/styles/jb-mono.css');
-@import url('https://proot.zip/styles/fa-icons.css');
+@import url('https://cdn.hullcss.org/styles/jb-mono.css');
+@import url('https://cdn.hullcss.org/styles/fa-icons.css');
 
 
 // Default Styles
@@ -43,8 +43,4 @@
   // Border Colours 
   border-color: $col-border-default;
 
-}
-
-html {
-  width: 100vw;
 }

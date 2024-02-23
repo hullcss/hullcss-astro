@@ -1,5 +1,93 @@
 ---
-import Todo from "../layouts/Todo.astro";
+import Boilerplate from "../layouts/Boilerplate.astro";
+
+import Exec from "../components/compound/Exec.astro";
+
+import TextTyper from "../components/dynamic/TextTyper.svelte";
+import Center from "../components/base/Center.astro";
+import LinkList from "../components/base/LinkList.astro";
+
+const keywords = [
+  "hull",
+  "computer",
+  "science",
+  "society",
+  "hcss",
+  "hcssoc",
+  "hull",
+  "university",
+  "students",
+  "student",
+  "union",
+  "hull",
+  "css",
+  "society",
+  "computer",
+];
 ---
 
-<Todo />
+<Boilerplate
+  title="Hull Computer Science Society"
+  description="This is the Hull Computer Science Society website."
+  keywords={keywords}
+  header={true}
+  footer={true}
+>
+  <div id="contact_main">
+    <h1>Contact</h1>
+    <p>
+      If you have any questions or queries, please feel free to reach out! 
+      We always love to hear from you. 
+      Our most reliable points of contact are our <a href="/links/email">Email</a> and <a href="/links/discord">Instagram</a>.
+    </p>
+    <p>
+      If you want to talk to us or our members in a more casual setting, 
+      feel free to join our <a href="/links/discord">Discord server</a>.
+      If none of these suit you, here is a full list of links to our social media and other platforms:
+    </p>
+    <LinkList 
+      title=""
+      links={
+        [
+          {
+            name: "Instagram",
+            href: "/links/instagram"
+          },
+          {
+            name: "Facebook",
+            href: "/links/facebook"
+          },
+          {
+            name: "Twitter",
+            href: "/links/twitter"
+          },
+          {
+            name: "LinkedIn",
+            href: "/links/linkedin"
+          },
+          {
+            name: "GitHub",
+            href: "/links/github"
+          },
+          {
+            name: "Discord",
+            href: "/links/discord"
+          },
+          {
+            name: "Email",
+            href: "/links/email"
+          },
+          {
+            name: "HUSU",
+            href: "/links/husu"
+          },
+          {
+            name: "Website",
+            href: "/links/website"
+          }
+        ]
+      }
+    />
+
+  </div>
+</Boilerplate>

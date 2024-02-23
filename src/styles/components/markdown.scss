@@ -1,6 +1,18 @@
+@import '../colours.scss';
+
 markdown {
 
   max-width: 700px;
+
+  blockquote {
+    border-left: 2.5px solid $col-mono-5;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding-left: 10px;
+    margin-left: 5px;
+  }
 
   h1 {
     text-decoration: underline;

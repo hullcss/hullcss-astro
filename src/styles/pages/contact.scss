@@ -1,0 +1,47 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  #contact_main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    max-width: 700px;
+
+    h1 {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 300;
+      
+      padding-top: 10px;
+    
+    }
+
+    ul {
+      list-style-type: disc;
+
+      padding-top: 15px;
+      padding-left: 15px;
+
+      li {
+        font-size: 1em;
+        font-weight: 300;
+      }
+    }
+
+    // if less than 550, remove padding
+    @media only screen and (max-width: 550px) {
+      padding-top: 0px;
+      padding-bottom: 25px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}

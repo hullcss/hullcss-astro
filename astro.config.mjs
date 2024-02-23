@@ -11,9 +11,10 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  integrations: [tailwind({
-    configFile: "./tailwind.config.cjs"
-  }), mdx(), partytown(), sitemap(), prefetch(), svelte()],
+  integrations: [
+    tailwind({ configFile: "./tailwind.config.cjs" }), 
+    mdx({ shikiConfig: { theme: "one-dark-pro" } }), 
+    partytown(), sitemap(), prefetch(), svelte()],
   site: "https://hullcss.org",
   adapter: cloudflare()
 });

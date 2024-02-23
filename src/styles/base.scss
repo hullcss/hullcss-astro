@@ -80,3 +80,13 @@ span {
   font-size: 0.9em;
   font-weight: 300;
 }
+
+blockquote {
+  border-left: 2.5px solid $col-mono-5;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  padding-left: 10px;
+  margin-left: 5px;
+}

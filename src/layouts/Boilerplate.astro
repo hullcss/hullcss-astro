@@ -27,22 +27,20 @@ const keywordsString = props.keywords.join(" ");
     <meta name="description" content={props.description} />
     <meta name="keywords" content={keywordsString} />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#282c34" />
+    <meta name="theme-color" content="#98c379" />
     <meta name="generator" content={Astro.generator} />
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="/" crossorigin />
-    <link href="https://proot.zip/styles/urbanist.css" rel="stylesheet" />
-    <link href="https://proot.zip/styles/fa-icons.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://cdn.hullcss.com" crossorigin />
     <title>{props.title}</title>
   </head>
   <body>
     {
       props.header ? 
         <Header 
-          // icon="https://proot.zip/assets/hallshero/logo.svg" 
           icon="/logo.svg"
           title="" 
         /> 

@@ -25,6 +25,11 @@
             "sizes": "32x32 128x128 180x180 192x192 256x256",
             "type": "image/x-icon",
             "purpose": "any maskable"
+        }, {
+            "src": "favicon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ]
 }

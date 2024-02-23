@@ -1,7 +1,7 @@
 @import 'colours.scss';
 
 main {
-  width: $size-main-w;
+  // width: $size-main-w; // for some reason, this doesn't work on win lol
   min-height: 70vh;
 
   background-color: $col-bg-default;

@@ -70,6 +70,10 @@ main {
   }
 
   .md_title {
+    .md_title_hash {
+      color: $col-mono-4;
+    }
+
     .md_title_text {
       padding-left: 5px;
       padding-right: 5px;

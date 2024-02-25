@@ -23,11 +23,13 @@ footer {
   }
 
   .info {
-    max-width: 375px;
+    max-width: 250px;
+    padding-right: 0;
   }
 
   .copywright {
     padding-top: 0;
+    padding-right: 0;
 
     span a {
       font-size: 1em;
@@ -38,11 +40,11 @@ footer {
   .misc {
     padding-top: 0;
     padding-bottom: 0;
+    padding-right: 0;
   }
 
   div {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
   }

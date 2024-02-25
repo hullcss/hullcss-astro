@@ -11,6 +11,10 @@ props.frontmatter.link = props.frontmatter.link || Astro.url;
 
 // get the last part of the url
 const url = Astro.url.pathname.split("/").pop();
+
+const headings = Astro.props.headings || [];
+
+
 ---
 
 {
@@ -34,6 +38,11 @@ const url = Astro.url.pathname.split("/").pop();
       </h2>
       <blockquote>{props.frontmatter.description}</blockquote>
     </div>
+    
+    <div class="markdown_toc">
+      { /* TODO */ }
+    </div>
+    
     <div class="markdown_content">
       <slot />
     </div>

@@ -1,16 +1,29 @@
 ---
+import Todo from "./Todo.astro";
 import Markdown from "./Markdown.astro";
+import Error from "./Error.astro";
 
 const { frontmatter } = Astro.props;
 
-
-// if draft, it will 404
-if (frontmatter.draft) {
-    return Astro.redirect('/404');
-}
+// if frontmatter.link is not defined, use the current url as the author's link
+frontmatter.link = frontmatter.link || Astro.url;
 ---
 
-<Markdown frontmatter={frontmatter}>
-<slot />
-</Markdown>
-
+{
+  frontmatter.draft ? 
+  <Error code="501" title="Draft">
+    Sorry, the page `<code>{Astro.url}</code>` is in draft mode.
+  </Error>
+  :
+  <Markdown frontmatter={frontmatter}>
+    <div class="markdown_title">
+      <h1>{frontmatter.title}</h1>
+      <h2>
+        By: <a href={frontmatter.link}>@{frontmatter.author.replace(" ", "_").toLowerCase()}</a> 
+        <em>({frontmatter.date})</em>
+      </h2>
+      <blockquote>{frontmatter.description}</blockquote>
+    </div>
+    <slot />
+  </Markdown>
+}

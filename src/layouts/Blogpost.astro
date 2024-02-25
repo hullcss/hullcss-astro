@@ -2,28 +2,225 @@
 import Todo from "./Todo.astro";
 import Markdown from "./Markdown.astro";
 import Error from "./Error.astro";
+import Icon from "../components/base/Icon.astro";
 
-const { frontmatter } = Astro.props;
+const props = Astro.props;
 
 // if frontmatter.link is not defined, use the current url as the author's link
-frontmatter.link = frontmatter.link || Astro.url;
+props.frontmatter.link = props.frontmatter.link || Astro.url;
+
+// get the last part of the url
+const url = Astro.url.pathname.split("/").pop();
 ---
 
 {
-  frontmatter.draft ? 
+  props.frontmatter.draft ? 
   <Error code="501" title="Draft">
     Sorry, the page `<code>{Astro.url}</code>` is in draft mode.
   </Error>
   :
-  <Markdown frontmatter={frontmatter}>
+  <Markdown frontmatter={props.frontmatter}>
     <div class="markdown_title">
-      <h1>{frontmatter.title}</h1>
+      <h1 class="md_title" id={`#${url}`}>
+        <span class="md_title_hash">#</span> 
+        <span class="md_title_text">{props.frontmatter.title}</span> 
+        <a href={`#${url}`} class="md_title_link">
+          <Icon icon={{code: "f0c1", bold: true}}/>
+        </a>
+      </h1>
       <h2>
-        By: <a href={frontmatter.link}>@{frontmatter.author.replace(" ", "_").toLowerCase()}</a> 
-        <em>({frontmatter.date})</em>
+        By: <a href={props.frontmatter.link}>@{props.frontmatter.author.replace(" ", "_").toLowerCase()}</a> 
+        <em>({props.frontmatter.date})</em>
       </h2>
-      <blockquote>{frontmatter.description}</blockquote>
+      <blockquote>{props.frontmatter.description}</blockquote>
     </div>
-    <slot />
+    <div class="markdown_content">
+      <slot />
+    </div>
   </Markdown>
 }
+
+<script>
+
+  // TODO: This code is cancer, but it works. ill fix it later^tm
+  // this only exists bc astro has made a breaking change and has not put it in there docs smh
+  // ill make a pr to fix the docs later^tm
+
+  const hashSpan = document.createElement("span");
+  hashSpan.textContent = "#";
+  hashSpan.className = "md_title_hash";
+
+  const mdIcon = document.createElement("i");
+  mdIcon.innerHTML = "&#xf0c1;";
+  mdIcon.className = "md_title_icon";
+  mdIcon.style.cursor = "pointer";
+  mdIcon.style.fontWeight = "900";
+
+  const h1s = document.querySelectorAll(".markdown_content h1");
+  const h2s = document.querySelectorAll(".markdown_content h2");
+  const h3s = document.querySelectorAll(".markdown_content h3");
+  const h4s = document.querySelectorAll(".markdown_content h4");
+  const h5s = document.querySelectorAll(".markdown_content h5");
+  const h6s = document.querySelectorAll(".markdown_content h6");
+
+  h1s.forEach(h1 => {
+    const id = h1.id;
+    const text = h1.textContent;
+    
+    h1.className = "md_title";
+    h1.innerHTML = "";
+
+    const spantest = document.createElement("span");
+    spantest.textContent = "#";
+    spantest.className = "md_title_hash";
+    h1.appendChild(spantest);
+
+    const spantext = document.createElement("span");
+    spantext.textContent = text;
+    spantext.className = "md_title_text";
+    h1.appendChild(spantext);
+
+    const link = document.createElement("a");
+    link.href = `#${id}`;
+    link.className = "md_title_link";
+    link.appendChild(mdIcon.cloneNode(true));
+    h1.appendChild(link);
+  });
+
+  h2s.forEach(h2 => {
+    const id = h2.id;
+    const text = h2.textContent;
+    
+    h2.className = "md_title";
+    h2.innerHTML = "";
+
+    const spantest = document.createElement("span");
+    spantest.textContent = "##";
+    spantest.className = "md_title_hash";
+    h2.appendChild(spantest);
+
+    const spantext = document.createElement("span");
+    spantext.textContent = text;
+    spantext.className = "md_title_text";
+    h2.appendChild(spantext);
+
+    const link = document.createElement("a");
+    link.href = `#${id}`;
+    link.className = "md_title_link";
+    link.appendChild(mdIcon.cloneNode(true));
+    h2.appendChild(link);
+  });
+
+  h3s.forEach(h3 => {
+    const id = h3.id;
+    const text = h3.textContent;
+    
+    h3.className = "md_title";
+    h3.innerHTML = "";
+
+    const spantest = document.createElement("span");
+    spantest.textContent = "###";
+    spantest.className = "md_title_hash";
+    h3.appendChild(spantest);
+
+    const spantext = document.createElement("span");
+    spantext.textContent = text;
+    spantext.className = "md_title_text";
+    h3.appendChild(spantext);
+
+    const link = document.createElement("a");
+    link.href = `#${id}`;
+    link.className = "md_title_link";
+    link.appendChild(mdIcon.cloneNode(true));
+    h3.appendChild(link);
+  });
+
+  h4s.forEach(h4 => {
+    const id = h4.id;
+    const text = h4.textContent;
+    
+    h4.className = "md_title";
+    h4.innerHTML = "";
+
+    const spantest = document.createElement("span");
+    spantest.textContent = "####";
+    spantest.className = "md_title_hash";
+    h4.appendChild(spantest);
+
+    const spantext = document.createElement("span");
+    spantext.textContent = text;
+    spantext.className = "md_title_text";
+    h4.appendChild(spantext);
+
+    const link = document.createElement("a");
+    link.href = `#${id}`;
+    link.className = "md_title_link";
+    link.appendChild(mdIcon.cloneNode(true));
+    h4.appendChild(link);
+  });
+
+  h5s.forEach(h5 => {
+    const id = h5.id;
+    const text = h5.textContent;
+    
+    h5.className = "md_title";
+    h5.innerHTML = "";
+
+    const spantest = document.createElement("span");
+    spantest.textContent = "#####";
+    spantest.className = "md_title_hash";
+    h5.appendChild(spantest);
+
+    const spantext = document.createElement("span");
+    spantext.textContent = text;
+    spantext.className = "md_title_text";
+    h5.appendChild(spantext);
+
+    const link = document.createElement("a");
+    link.href = `#${id}`;
+    link.className = "md_title_link";
+    link.appendChild(mdIcon.cloneNode(true));
+    h5.appendChild(link);
+  });
+
+  h6s.forEach(h6 => {
+    const id = h6.id;
+    const text = h6.textContent;
+    
+    h6.className = "md_title";
+    h6.innerHTML = "";
+
+    const spantest = document.createElement("span");
+    spantest.textContent = "######";
+    spantest.className = "md_title_hash";
+    h6.appendChild(spantest);
+
+    const spantext = document.createElement("span");
+    spantext.textContent = text;
+    spantext.className = "md_title_text";
+    h6.appendChild(spantext);
+
+    const link = document.createElement("a");
+    link.href = `#${id}`;
+    link.className = "md_title_link";
+    link.appendChild(mdIcon.cloneNode(true));
+    h6.appendChild(link);
+  });
+
+
+ 
+
+
+  // for every h element that has md_link give them an onclick event to copy the link to the clipboard
+  const hElements = document.querySelectorAll(".md_title");
+
+  hElements.forEach(h => {
+    h.addEventListener("click", () => {
+      const a = h.querySelector("a");
+      const link = a!.href;
+      navigator.clipboard.writeText(link);
+      window.history.pushState({}, "", link);
+    });
+  });
+  
+</script>

@@ -19,6 +19,29 @@ main {
 
       padding-top: 0;
       padding-bottom: 0;
+
+      span {
+        padding-right: 7.5px;
+      }
+
+      i {
+        padding-left: 2.5px;
+        font-size: 0.75em;
+
+        color: $col-bg-default;
+        transition: color 0.1s;
+
+        cursor: default;
+      }
+
+      &:hover {
+        i {
+          color: $col-fg-accent;
+          transition: color 0.1s;
+
+          cursor: pointer;
+        }
+      }
     }
 
     h2 {
@@ -46,93 +69,41 @@ main {
     }
   }
 
-  markdown {
-
-    max-width: 700px;
-
-
-    blockquote {
-      border-left: 2.5px solid $col-mono-5;
-
-      margin-top: 10px;
-      margin-bottom: 10px;
-
-      padding-left: 10px;
-      margin-left: 5px;
+  .md_title {
+    .md_title_text {
+      padding-left: 5px;
+      padding-right: 5px;
     }
 
-    h1 {
-      text-decoration: underline;
+    .md_title_icon {
+      padding-left: 2.5px;
 
-      font-size: 1.5em;
-      font-weight: 600;
+      font-size: 0.75em;
 
-      padding-bottom: 25px;
+      color: $col-bg-default;
+      transition: color 0.1s;
+
     }
 
-    h2 {
-      text-decoration: underline;
-
-      font-size: 1.3em;
-      font-weight: 600;
-
-      padding-top: 20px;
-      padding-bottom: 10px;
+    a {
+      text-decoration: none;
+      cursor: default;
     }
 
-    h3 {
-      text-decoration: underline;
-
-      font-size: 1.2em;
-      font-weight: 600;
-
-      padding-top: 15px;
-      padding-bottom: 5px;
-    }
-
-    h4 {
-      text-decoration: underline;
-
-      font-size: 1.1em;
-      font-weight: 500;
-
-      padding-top: 5px;
-      padding-bottom: 2.5px;
-    }
-
-    p {
-      font-size: 0.9em;
-      font-weight: 300;
-
-      em {
-        font-style: italic;
-
-        font-size: 0.9em;
-        font-weight: 300;
+    &:hover {
+      .md_title_icon {
+        color: $col-fg-accent;
+        transition: color 0.1s;
       }
-    }
 
-    ul {
-      list-style-type: disc;
-
-      padding-left: 15px;
-
-      li {
-        font-size: 0.9em;
-        font-weight: 300;
-      }
-    }
-
-    ol {
-      list-style-type: decimal;
-
-      padding-left: 30px;
-
-      li {
-        font-size: 0.9em;
-        font-weight: 300;
+      a {
+        // set cursor to pointer
+        cursor: pointer;
       }
     }
   }
+  markdown {
 
+    max-width: 700px
+  }
 }

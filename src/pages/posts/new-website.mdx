@@ -1,0 +1,65 @@
+---
+# Edit all of this
+title: "New Website"
+author: "Ash Entwisle"
+link: "https://github.com/ash-entwisle"
+date: "2024-02-23"
+description: "
+    After about 6 months of work, 
+    I'm Happy to announce the new HullCSS website is Live!! 
+    So, im taking this as the perfect opportunity 
+    to talk about the tools and technologies that went into making it. 
+"
+draft: false
+
+# DO NOT EDIT
+layout: ../../layouts/Blogpost.astro
+---
+
+## The Framework
+
+The website is built [#withastro](https://astro.build/), 
+a fairly new, simple and powerful framework that allows you to build frontend sites and client-side applications.
+I chose this because it's super fast, and it's super easy to use 
+and I can use components written in other frameworks like react and svelte
+allowing me to use components that I have already written in other projects.    
+
+### Components
+
+Most components are written in Astro, 
+but when making more reactive components (like the text typing effect on the homepage),
+I used [Svelte](https://svelte.dev/). 
+Astro makes it really easy to use components from other frameworks such as svelte and react. 
+
+### Blogposts
+
+For the blogposts, I used the MDX library for Astro. It allows me to write posts in a markdown-like syntax 
+while givig me the ability to use components and other features that are not available in regular markdown.
+
+### Styling
+
+For styling, I mostly used Sass (more specifically SCSS) to style the website.
+I chose this over other options bc its close enough to CSS that I can use it without much of a learning curve, 
+but it also has some great quality of life features that make css so much more bearable to use. 
+
+#### Theme
+
+For the colours, I chose to use [OneDark](https://github.com/atom/one-dark-ui). 
+A theme originally created to be used with the Atom text editor, 
+but has since been ported to many other applications and tools. 
+I chose this because I love the colours and I think it looks great 
+(if you look at my github, youll see that a lot of my other projects use this theme too lol). 
+I have tweaked the colours a bit just to make the theme more flexible. 
+
+## Hosting prodivder
+
+For hosting, I chose to use [CloudFlare Pages](https://pages.cloudflare.com/),
+a serverless platform that allows you to build, host, and scale your website or web application on the edge. 
+I chose this because it's free (up to 250k reqs/day) and it's super easy to use.
+It also has an integration with GitHub, so I can just push to my repo and it will automatically build and deploy my site for me.
+
+## Suggestions and Feedback
+
+If you have any questions, suggestions or feedback, 
+feel free to [open an issue](https://github.com/hullcss/hullcss-astro/issues) on the GitHub repo 
+or ping me (`@sudo_rm_rf_msft`) in the [HullCSS Discord](/links/discord).

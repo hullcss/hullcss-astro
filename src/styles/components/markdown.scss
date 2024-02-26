@@ -1,72 +1,116 @@
 @import '../colours.scss';
 
-markdown {
 
-  max-width: 700px;
+main {
 
-  blockquote {
-    border-left: 2.5px solid $col-mono-5;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    margin-left: 5px;
+  #error_main {
+    width: 100%;
   }
 
-  h1 {
-    text-decoration: underline;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
-    font-size: 1.5em;
-
-    padding-bottom: 5px;
-  }
-
-  h2 {
-    text-decoration: underline;
-
-    padding-top: 15px;
-    padding-bottom: 5px;
-  }
-
-  h3 {
-    text-decoration: underline;
+  .markdown_title {
 
     padding-top: 10px;
-    padding-bottom: 5px;
-  }
+    padding-bottom: 25px;
 
-  p {
-    font-size: 0.9em;
-    font-weight: 300;
+    h1 {
+      font-size: 2em;
+      font-weight: 600;
+      text-decoration: none;
 
-    em {
-      font-style: italic;
+      padding-top: 0;
+      padding-bottom: 0;
 
-      font-size: 0.9em;
-      font-weight: 300;
+      span {
+        padding-right: 7.5px;
+      }
+
+      i {
+        padding-left: 2.5px;
+        font-size: 0.75em;
+
+        color: $col-bg-default;
+        transition: color 0.1s;
+
+        cursor: default;
+      }
+
+      &:hover {
+        i {
+          color: $col-fg-accent;
+          transition: color 0.1s;
+
+          cursor: pointer;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 1em;
+      font-weight: 500;
+      text-decoration: none;
+
+      padding-top: 0;
+      padding-bottom: 0;
+
+      em {
+        padding-left: 5px;
+        font-size: 0.9em;
+        font-weight: 300;
+      }
+    }
+
+    p {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 
-  ul {
-    list-style-type: disc;
+  .md_title {
+    .md_title_hash {
+      color: $col-mono-4;
+    }
 
-    padding-left: 15px;
+    .md_title_text {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
 
-    li {
-      font-size: 0.9em;
-      font-weight: 300;
+    .md_title_icon {
+      padding-left: 2.5px;
+
+      font-size: 0.75em;
+
+      color: $col-bg-default;
+      transition: color 0.1s;
+
+    }
+
+    a {
+      text-decoration: none;
+      cursor: default;
+    }
+
+    &:hover {
+      .md_title_icon {
+        color: $col-fg-accent;
+        transition: color 0.1s;
+      }
+
+      a {
+        // set cursor to pointer
+        cursor: pointer;
+      }
     }
   }
+  markdown {
 
-  ol {
-    list-style-type: decimal;
-
-    padding-left: 30px;
-
-    li {
-      font-size: 0.9em;
-      font-weight: 300;
-    }
+    max-width: 700px
   }
 }

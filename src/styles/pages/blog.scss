@@ -59,22 +59,29 @@ main {
           .blog_post_title {
             text-decoration: underline;
             text-decoration-style: wavy;
-          
+            
+            color: $col-fg-accent;
+          }
+
+          .blog_post_hash {
+            color: $col-mono-4;
           }
 
           &:hover {
-            a {
-              color: $col-fg-accent;
-              transition: 0.1s;
-            }
 
-            i {
-              color: $col-fg-accent;
-              transition: 0.1s;
-            }
+            // i {
+            //   color: $col-fg-accent;
+            //   transition: 0.1s;
+            // }
 
-            .blog_post_hash {
-              color: $col-mono-4;
+            // .blog_post_hash {
+            //   color: $col-mono-4;
+            //   transition: 0.1s;
+            // }
+
+            .blog_post_title {
+              // set underline to solid
+              text-decoration-style: solid;
               transition: 0.1s;
             }
           }
@@ -92,6 +99,8 @@ main {
 
           h2 {
             a {
+              color: $col-fg-accent;
+              transition: 0.1s;
               i {
                 // TODO: fix css bug
                 color: $col-fg-default;

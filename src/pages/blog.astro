@@ -71,11 +71,13 @@ const keywords = [
       {
         filteredPosts.map((post) => (
           <div class="blog_post" id={ post.url.split("/").pop() }>
-            <h2><a href={post.url}>
+            <h2>
               <span class="blog_post_hash">#</span>
-              <span class="blog_post_title">{post.data.title}</span>
-              <span class="blog_post_link"><Icon icon={{code: "f0c1", bold: true}}/></span>
-            </a></h2>
+              <a href={post.url}>
+                <span class="blog_post_title">{post.data.title}</span>
+                { /* <span class="blog_post_link"><Icon icon={{code: "f0c1", bold: true}}/></span> */ }
+              </a>
+            </h2>
             <p>
               {post.data.description}
             </p>

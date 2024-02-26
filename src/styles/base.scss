@@ -13,23 +13,34 @@ main {
 }
 
 h1 {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: 600;
+
+  padding-bottom: 25px;
 }
 
 h2 {
-  font-size: 1.25em;
-  font-weight: 500;
+  font-size: 1.3em;
+  font-weight: 600;
+
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 h3 {
-  font-size: 1.15em;
-  font-weight: 500;
+  font-size: 1.2em;
+  font-weight: 600;
+
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
 
 h4 {
   font-size: 1.1em;
-  font-weight: 400;
+  font-weight: 500;
+
+  padding-top: 5px;
+  padding-bottom: 2.5px;
 }
 
 h5 {
@@ -40,11 +51,6 @@ h5 {
 h6 {
   font-size: 0.9em;
   font-weight: 400;
-}
-
-p {
-  font-size: 0.9em;
-  font-weight: 300;
 }
 
 a {
@@ -77,8 +83,7 @@ a {
 }
 
 span {
-  font-size: 0.9em;
-  font-weight: 300;
+  font: inherit;
 }
 
 blockquote {
@@ -89,4 +94,42 @@ blockquote {
 
   padding-left: 10px;
   margin-left: 5px;
+}
+
+p {
+  font-size: 0.9em;
+  font-weight: 300;
+
+  em {
+    font-style: italic;
+
+    font-size: 0.9em;
+    font-weight: 300;
+  }
+}
+
+ul {
+  list-style-type: disc;
+
+  padding-left: 15px;
+
+  li {
+    font-size: 0.9em;
+    font-weight: 300;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+
+  padding-left: 30px;
+
+  li {
+    font-size: 0.9em;
+    font-weight: 300;
+  }
+}
+
+i {
+  font-style: normal;
 }

@@ -133,3 +133,13 @@ ol {
 i {
   font-style: normal;
 }
+
+blockquote {
+  border-left: 2.5px solid $col-mono-5;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  padding-left: 10px;
+  margin-left: 5px;
+}

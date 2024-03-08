@@ -14,11 +14,13 @@ const url = Astro.url.pathname.split("/").pop();
 
 const headings = Astro.props.headings || [];
 
+const draft_view = Astro.url.searchParams.get("draft") === "true";
+
 
 ---
 
 {
-  props.frontmatter.draft ? 
+  props.frontmatter.draft && !draft_view ? 
   <Error code="501" title="Draft">
     Sorry, the page `<code>{Astro.url}</code>` is in draft mode.
   </Error>

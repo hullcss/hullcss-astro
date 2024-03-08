@@ -14,13 +14,16 @@ const url = Astro.url.pathname.split("/").pop();
 
 const headings = Astro.props.headings || [];
 
+const draft_view = Astro.url.searchParams.get("draft") === "true";
+
 
 ---
 
 {
-  props.frontmatter.draft ? 
-  <Error code="501" title="Draft">
-    Sorry, the page `<code>{Astro.url}</code>` is in draft mode.
+  props.frontmatter.draft && !draft_view ? 
+  <Error code="404" title="Page not Found">
+    Sorry, the page `<code>{Astro.url}</code>` does not exist, 
+    Click <a href="/">here</a> to go back to the homepage.
   </Error>
   :
   <Markdown frontmatter={props.frontmatter}>

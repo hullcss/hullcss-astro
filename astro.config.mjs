@@ -13,7 +13,9 @@ export default defineConfig({
   output: "server",
   integrations: [
     tailwind({ configFile: "./tailwind.config.cjs" }), 
-    mdx({ shikiConfig: { theme: "one-dark-pro" } }), 
+    mdx({ 
+      shikiConfig: { theme: "one-dark-pro" } 
+    }), 
     partytown(), sitemap(), prefetch(), svelte()],
   site: "https://hullcss.org",
   adapter: cloudflare()

@@ -115,10 +115,13 @@ main {
 
     img {
       display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
       margin-left: auto;
       margin-right: auto;
-      max-width: 80%;
       max-height: 400px;
+      // dynamic width, 40% of the container
+      width: 40%;
 
       // curve the edges of the image
       border-radius: 10px;
@@ -129,6 +132,15 @@ main {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+
+      // if less than 400, make the images stack
+      @media (max-width: 400px) {
+        flex-direction: column;
+        img {
+          width: 80%;
+        }
+      }
+
     }
   }
 

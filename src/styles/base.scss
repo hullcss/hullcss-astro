@@ -62,13 +62,13 @@ a {
   transition: color 0.1s;
 
   text-decoration: underline;
-  text-decoration-style: wavy;
+  //text-decoration-style: wavy;
   
   transition: text-decoration-style 0.1s;
 
   // on hover, make line straight in 0.1s 
   &:hover {
-    text-decoration-style: solid;
+    text-decoration-style: none;
     transition: text-decoration-style 0.1s;
 
     color: $col-light-4;

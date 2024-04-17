@@ -68,7 +68,7 @@ a {
 
   // on hover, make line straight in 0.1s 
   &:hover {
-    text-decoration-style: solid;
+    text-decoration-style: none;
     transition: text-decoration-style 0.1s;
 
     color: $col-light-4;

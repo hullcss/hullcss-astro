@@ -109,8 +109,33 @@ main {
       }
     }
   }
+
+  .markdown_content {
+    // center img horizontally, set width to 80% of the container
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 80%;
+      max-height: 400px;
+
+      // curve the edges of the image
+      border-radius: 10px;
+    }
+
+    .images-sbs {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   markdown {
 
     max-width: 700px
+
+    // set width of img to 80% of the container
   }
 }

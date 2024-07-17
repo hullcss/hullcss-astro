@@ -24,7 +24,10 @@ const filteredPosts = posts.filter((post) => {
         .includes(search.toLowerCase());
 });
 
-
+// sort posts in decscending order of date
+filteredPosts.sort((a, b) => {
+  return a.data.date < b.data.date ? 1 : -1;
+});
 
 
 
